@@ -16,8 +16,7 @@ main() async {
     ..beforeCreated.listen(hooks.chainListeners([
       hooks.addCreatedAt(),
       hooks.addUpdatedAt(),
-    ]))
-    ;
+    ]));
 
   await http.startServer('127.0.0.1', 3000);
   print('Listening at ${http.uri}');
